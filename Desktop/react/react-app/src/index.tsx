@@ -4,13 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+if(!navigator.geolocation) {
+  alert('Geolocation is not supported by your browser');
+  throw new Error('Geolocation is not supported by your browser');
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+
     <App />
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
