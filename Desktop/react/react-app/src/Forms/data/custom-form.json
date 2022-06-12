@@ -1,0 +1,76 @@
+[{
+        "type": "input",
+        "name": "firstName",
+        "placeholder": "Enter name here",
+        "label": "First Name",
+        "value": "",
+        "validations": [{
+            "type": "required",
+            "description": "This field is required"
+        }, {
+            "type": "minLength",
+            "value": "3",
+            "description": "This field must be at least 3 characters long"
+        }, {
+            "type": "maxLength",
+            "value": "10",
+            "description": "This field must be at most 10 characters long"
+        }]
+    },
+    {
+        "type": "input",
+        "name": "lastName",
+        "placeholder": "Enter last name here",
+        "label": "Last Name",
+        "value": "",
+        "validations": [{
+            "type": "required",
+            "description": "This field is required"
+        }, {
+            "type": "minLength",
+            "value": "3",
+            "description": "This field must be at least 3 characters long"
+        }, {
+            "type": "maxLength",
+            "value": "10",
+            "description": "This field must be at most 10 characters long"
+        }]
+
+    },
+    {
+        "type": "input",
+        "name": "email",
+        "label": "Email",
+        "placeholder": "Enter email here",
+        "validations": [{
+            "type": "required",
+            "description": "This field is required"
+        }, {
+            "type": "correctEmail",
+            "description": "This field must be a valid email"
+        }]
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "options": [{
+                "id": "1",
+                "label": "Dota 2"
+            },
+            {
+                "id": "2",
+                "label": "League of Legends"
+            },
+            {
+                "id": "3",
+                "label": "CS:GO"
+            }
+        ],
+        "validations": [{
+            "type": "required",
+            "description": "This field is required"
+        }]
+    }
+]

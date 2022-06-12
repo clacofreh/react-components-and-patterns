@@ -6,11 +6,16 @@ import {
   NavLink,
   Navigate,
 } from "react-router-dom";
-import {  FormikAbstract, 
+import {  
+          DynamicForm,
+          FormikAbstract, 
           FormikBasicPage,
           FormikComponents,
           FormikYupPage,
-          RegisterPage } from "../Forms/pages";
+          RegisterFormikPage,
+          RegisterPage,
+         } from "../Forms/pages";
+
 
 import logo from "../logo.svg";
 
@@ -26,7 +31,7 @@ export default function Navigation() {
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
                 to="/"
               >
-                Home
+                Form | Manual
               </NavLink>
             </li>
             <li>
@@ -61,16 +66,34 @@ export default function Navigation() {
                 Formik | Abstractaction
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+                to="/register-formik-page"
+              >
+                Register |  Formik Page 
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+                to="/dynamic-form"
+              >
+                Dynamic |  Form
+              </NavLink>
+            </li>
        
           </ul>
         </nav>
         <Routes>
+          <Route path="/*" element={<Navigate to="/" replace />} />
           <Route path="/" element={<RegisterPage />} />
+          <Route path="/dynamic-form" element={<DynamicForm />} />
           <Route path="/formik-abstract" element={<FormikAbstract />} />
           <Route path="/formik-basic" element={<FormikBasicPage />} />
+          <Route path="/register-formik-page" element={<RegisterFormikPage />} />
           <Route path="/formik-components" element={<FormikComponents />} />
           <Route path="/formik-yup" element={<FormikYupPage />} />
-          <Route path="/*" element={<Navigate to="/" replace />} />
         
         </Routes>
       </div>
